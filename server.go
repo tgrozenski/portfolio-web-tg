@@ -14,10 +14,10 @@ func main() {
     http.Handle("/", http.FileServer(http.Dir("./static")))
 
     http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hi")
+        fmt.Fprintf(w, "Hello there")
     })
 
-    port := ":5000"
+    port := ":80"
     fmt.Println("Server is running on port" + port)
 
     // Start server on port specified above
